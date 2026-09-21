@@ -41,19 +41,19 @@ jobs:
           ref: stretch3
           path: ./microbitMore
 
+      # ネットワーク拡張のクローン
+      - name: Checkout websock-ext
+        uses: actions/checkout@v4
+        with:
+          repository: kitaratch/websock-ext
+          path: ./websock-ext
+
       # pcratch IoT 拡張のクローン
       - name: Checkout pcratch IoT Extension
         uses: actions/checkout@v4
         with:
           repository: jcodeorg/pcratch-iot-ext
           path: ./pcratch-iot-ext
-
-      # ネットワーク拡張のクローン
-      - name: Checkout websock-ext
-        uses: actions/checkout@v4
-        with:
-          repository: jcodeorg/websock-ext
-          path: ./websock-ext
 
       # microbitMore のセットアップ
       - name: Setup microbitMore
