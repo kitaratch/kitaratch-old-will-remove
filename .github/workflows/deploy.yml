@@ -63,6 +63,7 @@ jobs:
       - name: Setup pcratch IoT Extension
         run: sh ./pcratch-iot-ext/install-stretch3.sh
 
+        
       # websock-ext のセットアップ
       - name: Setup websock-ext
         run: sh ./websock-ext/install-stretch3.sh
