@@ -46,6 +46,13 @@ jobs:
           repository: jcodeorg/pcratch-iot-ext
           path: ./pcratch-iot-ext
 
+      # ネットワーク拡張のクローン
+      - name: Checkout websock-ext
+        uses: actions/checkout@v4
+        with:
+          repository: kitaratch/websock-ext
+          path: ./websock-ext
+
       # microbitMore のセットアップ
       - name: Setup microbitMore
         run: sh ./microbitMore/install-stretch3.sh
@@ -53,6 +60,10 @@ jobs:
       # pcratch IoT 拡張のセットアップ
       - name: Setup pcratch IoT Extension
         run: sh ./pcratch-iot-ext/install-stretch3.sh
+
+      # websock-ext のセットアップ
+      - name: Setup websock-ext
+        run: sh ./websock-ext/install-stretch3.sh
 
       # ビルドの実行
       - name: Build Project
